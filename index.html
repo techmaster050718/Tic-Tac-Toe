@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Tic Tac Toe</h1>
+        
+        <div class="scoreboard">
+            <div class="score-item">
+                <div>Player <span class="player-x">X</span></div>
+                <span id="scoreX">0</span>
+            </div>
+            <div class="score-item">
+                <div>Player <span class="player-o">O</span></div>
+                <span id="scoreO">0</span>
+            </div>
+        </div>
+
+        <div class="game-info" id="gameInfo">Player <span class="player-x">X</span>'s Turn</div>
+
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <button class="reset-btn" onclick="resetGame()">🔄 Reset Game</button>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2 id="popupTitle">🎉 Player X Wins!</h2>
+            <p id="popupMessage">Congratulations on your victory!</p>
+            <div class="popup-buttons">
+                <button class="popup-btn restart" onclick="restartFromPopup()">Play Again</button>
+                <button class="popup-btn close" onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
